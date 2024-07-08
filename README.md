@@ -1,13 +1,13 @@
 # PDHIO
 
-The __pdhio__ is a Fortran library for reading and processing PDH (Primary Data Handling) file format for scattering data. The PDH format is the native format for the PCG (Physical Chemistry Graz) SAXS software developed at the University of Graz by Glatter _et al._
+The __pdhio__ is a modern Fortran library for reading and processing PDH (Primary Data Handling) files for scattering data. The PDH format is the native format for the PCG (Physical Chemistry Graz) SAXS software developed at the University of Graz by Glatter _et al._
 
-## TODO:
+This library was written during my PhD studies long time ago. If anyone else has any use for it so much better. After so many years there are still some things to do: 
 
-- [ ] Documentation
-- [ ] Add tests
-- [ ] Smoothing functions
-- [ ] Porod & Guinier fit
+* [ ] Documentation (seriously dude?! After so many years no docs)
+* [ ] Add (proper) tests
+* [ ] Add smoothing functions (savgol?)
+* [ ] Porod & Guinier fits
 
 ## Build & Install
 
@@ -17,13 +17,9 @@ Clone repository and type the following:
 make
 make install
 ```
-__NOTE:__ To install the library you may need to run command as *root* (or *sudo*)
+__NOTE:__ To install the library you may need to run command as *root* (or *sudo*).
 
-## Documentation
-
-<!-- TODO -->
-
-## Usage
+## Using pdhio in your project
 
 To use the library in your project add `use pdhio` in the modules section of your program:
 
@@ -42,6 +38,10 @@ To make things easier [pkg-config](https://linux.die.net/man/1/pkg-config) file 
 ```bash
 pkg-config pdhio --libs --cflags
 ```
+
+## [Documentation](doc/README.md)
+
+Documentation is a work in progress (as always with my project) and is available at [doc/README.md](doc/README.md). This includes API documentation and example on how to use library.
 
 ## License
 
