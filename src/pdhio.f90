@@ -732,7 +732,7 @@ subroutine pdh_smear (this, length, width, stat, errmsg)
                     x(j) = sqrt(this%x(i)**2 + length%x(j)**2)
                 end do
                 y = weights * interp1d(x, this%x, this%y)
-                temp(i) = trapz(y, x)
+                temp(i) = 2 * trapz(y, x)
 
             end do
 
