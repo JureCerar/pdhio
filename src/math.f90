@@ -17,14 +17,16 @@
 ! along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 module math
+    use iso_fortran_env, only: INT64, REAL64 
     implicit none
 
 contains
 
 ! Safe division
-real elemental function div(a, b) result (result)
+elemental function div(a, b) result (result)
     implicit none
     real, intent(IN) :: a, b
+    real :: result
 
     result = merge(a / b, 0., b /= 0)
 
@@ -32,9 +34,10 @@ end function div
 
 
 ! Trapezoidal integration
-real function trapz (y, x) result (result)
+function trapz (y, x) result (result)
     implicit none
     real, intent(IN) :: y(:), x(size(y))
+    real(REAL64) :: result
     integer :: i
 
     result = 0.0
