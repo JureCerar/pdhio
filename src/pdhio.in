@@ -1,0 +1,6 @@
+Name: pdhio
+Description: Library for handling PDH SAXS data
+URL: https://github.com/JureCerar/pdhio
+Version: 0.1.0
+Libs: -L${INSTALL_DIR}/lib -lpdhio
+Cflags: -I${INSTALL_DIR}/include
